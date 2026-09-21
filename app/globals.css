@@ -1,5 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Faustina:ital,wght@0,300..800;1,300..800&family=Figtree:wght@300;400;500;600&display=swap');
 
+:root {
+  --color-1: #F8F9FA;
+  --color-1-rgb: 248, 249, 250;
+  --color-1-hsl: 210, 17%, 98%;
+  --color-2: #E9ECEF;
+  --color-2-rgb: 233, 236, 239;
+  --color-2-hsl: 210, 16%, 93%;
+  --color-3: #DEE2E6;
+  --color-3-rgb: 222, 226, 230;
+  --color-3-hsl: 210, 14%, 89%;
+  --color-4: #CED4DA;
+  --color-4-rgb: 206, 212, 218;
+  --color-4-hsl: 210, 14%, 83%;
+  --color-5: #ADB5BD;
+  --color-5-rgb: 173, 181, 189;
+  --color-5-hsl: 210, 11%, 71%;
+}
+
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
@@ -308,22 +326,28 @@ footer {
   .case-nav { flex-direction: column; }
 }
 
-/* Theme: warm cream, Faustina serif headings, cobalt accents (Warby Parker-inspired) */
+/* Theme: cool-gray palette (--color-1..5) with Faustina serif headings.
+   The palette is all light tones, so it drives backgrounds, borders and fills;
+   text and accent use darker neutrals from the same family (all AA-checked). */
 :root {
-  --bg: #FBF8F3;
+  --ink: #212529;          /* 15.4:1 on white */
+  --ink-hover: #343A40;
+  --ink-secondary: #495057; /* 8.2:1 on white, 6.3:1 on --color-3 */
+  --ink-tertiary: #5C636A;  /* 6.1:1 on white, 4.7:1 on --color-3 */
+  --bg: var(--color-1);
   --surface: #FFFFFF;
-  --border: #E7E0D5;
-  --border-subtle: #EFE9DF;
-  --text-primary: #14213D;
-  --text-secondary: #55607A;
-  --text-tertiary: #646C82;
-  --accent: #0F41D6;
-  --accent-hover: #0A2FA3;
-  --accent-muted: #F3EEE5;
-  --tag-bg: #E9EEFC;
-  --tag-text: #0F41D6;
-  --link: #0F41D6;
-  --nav-bg: rgba(251, 248, 243, 0.9);
+  --border: var(--color-3);
+  --border-subtle: var(--color-2);
+  --text-primary: var(--ink);
+  --text-secondary: var(--ink-secondary);
+  --text-tertiary: var(--ink-tertiary);
+  --accent: var(--ink);
+  --accent-hover: var(--ink-hover);
+  --accent-muted: var(--color-2);
+  --tag-bg: var(--color-3);
+  --tag-text: var(--ink);
+  --link: var(--ink);
+  --nav-bg: rgba(var(--color-1-rgb), 0.9);
   --font-sans: 'Figtree', system-ui, sans-serif;
   --font-mono: 'Figtree', system-ui, sans-serif;
   --font-display: 'Faustina', Georgia, serif;
@@ -350,13 +374,13 @@ footer {
 .section-label::after { background: var(--border); }
 .work-grid { gap: 1.25rem; background: none; border: none; border-radius: 0; overflow: visible; }
 .work-card { border-radius: var(--radius-lg); border: 1px solid var(--border); padding: 2.25rem; }
-.work-card:hover { background: #fff; border-color: var(--accent); box-shadow: 0 10px 30px -14px rgba(15, 65, 214, 0.35); }
+.work-card:hover { background: #fff; border-color: var(--accent); box-shadow: 0 10px 30px -14px rgba(33, 37, 41, 0.35); }
 .work-card .t-title { font-family: var(--font-display); font-size: 1.5rem !important; font-weight: 400 !important; letter-spacing: -0.02em; }
 .work-card-arrow { background: var(--accent); border-color: var(--accent); color: #fff; }
 .work-card:hover .work-card-arrow { border-color: var(--accent); color: #fff; }
 .tag { font-weight: 500; }
 .sidebar-card { background: #fff; }
-.outcome-highlight { background: #E9EEFC; border-color: #D3DCF7; }
+.outcome-highlight { background: var(--color-2); border-color: var(--color-4); }
 .outcome-highlight .metric,
 .sidebar-stat-value { font-family: var(--font-display); font-weight: 400; color: var(--accent); }
 .pullquote { border-left: 3px solid var(--accent); font-family: var(--font-display); font-size: 1.25rem; font-weight: 400; }
@@ -367,7 +391,7 @@ footer {
 .case-nav-item:hover { border-color: var(--accent); background: #fff; }
 footer { background: var(--text-primary); border: none; }
 footer .t-label,
-.footer-links a { color: #E9E4DA; }
+.footer-links a { color: var(--color-3); }
 .footer-links a:hover { color: #fff; }
 
 /* Accessibility (WCAG 2.2 AA) */
