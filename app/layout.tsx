@@ -1,5 +1,9 @@
 import type { Metadata } from 'next'
+import { Faustina, Figtree } from 'next/font/google'
 import './globals.css'
+
+const faustina = Faustina({ subsets: ['latin'], style: ['normal', 'italic'], display: 'swap', variable: '--font-faustina' })
+const figtree = Figtree({ subsets: ['latin'], weight: ['300', '400', '500', '600'], display: 'swap', variable: '--font-figtree' })
 
 export const metadata: Metadata = {
   title: 'Jeff Vertido — UX/UI Designer | Design Systems | Front-End',
@@ -8,7 +12,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="en" className={`${faustina.variable} ${figtree.variable}`}>
       <body>
         <a href="#main" className="skip-link">Skip to main content</a>
         <Nav />
