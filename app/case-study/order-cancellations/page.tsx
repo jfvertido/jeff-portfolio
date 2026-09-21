@@ -59,7 +59,7 @@ export default function CaseStudy1() {
               <li>Designed mid-fidelity wireframes in Figma to map proposed UI changes</li>
               <li>Presented designs through formal stakeholder review for approval prior to build</li>
               <li>Implemented approved designs in HTML, CSS, and JavaScript within Salesforce Commerce Cloud</li>
-              <li>Ensured all implementation met WCAG 2.1 AA accessibility standards</li>
+              <li>Ensured all implementation met WCAG 2.2 AA accessibility standards</li>
             </ul>
 
             <h2>Design Approach</h2>
@@ -154,7 +154,7 @@ export default function CaseStudy1() {
               <div>
                 <p className="t-label" style={{marginBottom: '0.75rem'}}>Tools</p>
                 <div style={{display: 'flex', gap: '0.375rem', flexWrap: 'wrap'}}>
-                  {['Figma', 'HTML/CSS', 'JavaScript', 'SFCC', 'WCAG 2.1 AA'].map(t => (
+                  {['Figma', 'HTML/CSS', 'JavaScript', 'SFCC', 'WCAG 2.2 AA'].map(t => (
                     <span key={t} className="tag">{t}</span>
                   ))}
                 </div>

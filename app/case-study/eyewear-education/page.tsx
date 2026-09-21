@@ -59,7 +59,7 @@ export default function CaseStudy3() {
               <li>Defined the information architecture for all three pages — section sequencing, content hierarchy, and user flow</li>
               <li>Worked with the copywriter to align structure with content goals and ensure the layout supported scannability and comprehension</li>
               <li>Built all three pages in HTML, CSS, and JavaScript within Salesforce Commerce Cloud</li>
-              <li>Ensured implementation met WCAG 2.1 AA accessibility standards across all viewports</li>
+              <li>Ensured implementation met WCAG 2.2 AA accessibility standards across all viewports</li>
             </ul>
 
             <h2>Design Approach</h2>
@@ -156,7 +156,7 @@ export default function CaseStudy3() {
               <div>
                 <p className="t-label" style={{marginBottom: '0.75rem'}}>Tools</p>
                 <div style={{display: 'flex', gap: '0.375rem', flexWrap: 'wrap'}}>
-                  {['Figma', 'HTML/CSS', 'JavaScript', 'SFCC', 'WCAG 2.1 AA'].map(t => (
+                  {['Figma', 'HTML/CSS', 'JavaScript', 'SFCC', 'WCAG 2.2 AA'].map(t => (
                     <span key={t} className="tag">{t}</span>
                   ))}
                 </div>
