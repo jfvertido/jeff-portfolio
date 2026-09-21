@@ -360,6 +360,7 @@ footer {
 .prose p,
 .hero-sub { font-weight: 400; }
 .t-label { font-family: var(--font-sans); text-transform: none; letter-spacing: 0; font-size: 0.875rem; font-weight: 500; color: var(--accent); }
+.hero { background: var(--color-2); border-bottom: 1px solid var(--color-3); }
 .hero-eyebrow::before { background: var(--accent); }
 .hero-sub { color: var(--text-secondary); font-size: 1.1875rem; }
 .btn { padding: 0.75rem 1.5rem; font-weight: 600; }
