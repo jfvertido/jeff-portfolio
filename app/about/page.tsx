@@ -39,7 +39,7 @@ export default function About() {
               <div className="about-grid">
                 {[
                   { label: 'Design & UX', items: ['UX Design & Research', 'UI & Visual Design', 'Information Architecture', 'Wireframing & Prototyping', 'Design Systems', 'Atomic Design Principles', 'Design Tokens', 'UX Writing', 'A/B Testing'] },
-                  { label: 'Engineering', items: ['HTML5 / CSS3', 'JavaScript', 'Responsive Web Development', 'WCAG 2.1 AA Accessibility', 'Salesforce Commerce Cloud', 'Component Architecture', 'Cross-browser Compatibility', 'QA & UAT'] },
+                  { label: 'Engineering', items: ['HTML5 / CSS3', 'JavaScript', 'Responsive Web Development', 'WCAG 2.2 AA Accessibility', 'Salesforce Commerce Cloud', 'Component Architecture', 'Cross-browser Compatibility', 'QA & UAT'] },
                   { label: 'AI & Automation', items: ['Claude & Claude Code', 'Claude Skills', 'Prompt Engineering', 'LLM Application Architecture', 'AI Output Verification', 'AI-assisted Workflows'] },
                   { label: 'Tools', items: ['Figma (Design Systems, Prototyping)', 'Visual Studio Code', 'Git & GitHub', 'Vercel', 'Adobe Creative Suite', 'Next.js (learning)', 'React (learning)', 'jQuery'] },
                   { label: 'Process', items: ['Cross-functional Collaboration', 'Stakeholder Presentation & Management', 'Design-to-dev Handoff', 'Accessibility Auditing', 'Component Documentation', 'Mentoring & Design Critique'] },
