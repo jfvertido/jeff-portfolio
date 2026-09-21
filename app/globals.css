@@ -378,7 +378,7 @@ footer {
 .work-card:hover .work-card-arrow { border-color: var(--accent); color: #fff; }
 .tag { font-weight: 500; }
 .sidebar-card { background: var(--surface); }
-.outcome-highlight { background: var(--color-3); border-color: var(--color-4); }
+.outcome-highlight { background: var(--color-4); border-color: var(--color-5); }
 .outcome-highlight .metric,
 .sidebar-stat-value { font-family: var(--font-display); font-weight: 400; color: var(--accent); }
 .pullquote { border-left: 3px solid var(--accent); font-family: var(--font-display); font-size: 1.25rem; font-weight: 400; }
