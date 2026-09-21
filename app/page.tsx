@@ -5,7 +5,7 @@ export default function Home() {
       <section className="hero">
         <div className="container">
           <div className="hero-eyebrow">
-            <span className="t-label">Design Engineer · Sacramento, CA</span>
+            <span className="t-label">UX/UI Designer · Design Systems · Front-End</span>
           </div>
           <h1 className="t-display hero-headline">
             Design that holds<br />
@@ -24,12 +24,12 @@ export default function Home() {
       {/* Intro strip */}
       <section style={{borderTop: '1px solid var(--border)', borderBottom: '1px solid var(--border)', padding: '2rem 0', marginBottom: '0'}}>
         <div className="container">
-          <div style={{display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '2rem'}}>
+          <div className="stats-grid">
             {[
-              { value: '5+', label: 'Years bridging design & engineering' },
+              { value: '10+', label: 'Years designing and building for the web' },
               { value: '10.5→8.3%', label: 'Order cancellation rate reduced' },
-              { value: '100%', label: 'On-time delivery record' },
-              { value: '4+', label: 'AI/UX certifications (IxDF + Designlab)' },
+              { value: '1st', label: 'Internal VSP/Eyeconic hackathon, Sep 2026' },
+              { value: '14', label: 'Certifications & courses (IxDF, Anthropic, Designlab, Udemy)' },
             ].map(s => (
               <div key={s.label}>
                 <div style={{fontSize: '1.25rem', fontWeight: 300, letterSpacing: '-0.02em', marginBottom: '0.25rem'}}>{s.value}</div>
@@ -52,7 +52,7 @@ export default function Home() {
               href="/case-study/order-cancellations"
               number="01"
               title="Reducing Order Cancellations"
-              description="Diagnosed a cluster of checkout friction points and shipped contextual UI interventions that moved the cancellation rate from 10.5% to 8.3% — surpassing the executive-set target."
+              description="Diagnosed a cluster of checkout friction points and shipped contextual UI interventions that moved the cancellation rate from 10.5% to 8.3% — surpassing the business target of under 10%."
               tags={['UX Design', 'Front-End', 'eCommerce']}
               year="2024–25"
             />
@@ -60,7 +60,7 @@ export default function Home() {
               href="/case-study/design-system"
               number="02"
               title="Design System Foundation"
-              description="Helped establish Eyeconic's first shared component library across Creative, Dev, and accessibility teams — eliminating version conflicts and creating a single source of truth where none existed."
+              description="Helped replace a basic style guide with a full design system shared across Creative, Dev, and accessibility teams — cutting version conflicts and giving design and development a single source of truth."
               tags={['Design Systems', 'Component Architecture', 'Figma']}
               year="2024–25"
               featured
@@ -121,7 +121,7 @@ function WorkCard({ href, number, title, description, tags, year, featured }: {
       <div className="work-card-meta">
         <div style={{display: 'flex', alignItems: 'center', gap: '0.75rem'}}>
           <span className="t-label">{number}</span>
-          {featured && <span className="tag" style={{background: 'var(--text-primary)', color: 'white', fontFamily: 'var(--font-mono)'}}>Featured</span>}
+          {featured && <span className="tag" style={{background: 'var(--accent)', color: 'var(--on-accent)', fontFamily: 'var(--font-mono)'}}>Featured</span>}
           <span className="t-label" style={{marginLeft: 'auto'}}>{year}</span>
         </div>
         <h3 className="t-title" style={{fontSize: '1.125rem', fontWeight: 400}}>{title}</h3>

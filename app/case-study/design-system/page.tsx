@@ -23,7 +23,7 @@ export default function CaseStudy2() {
           </div>
           <h1 className="t-headline" style={{marginBottom: '1rem'}}>Building a Design System Foundation at Eyeconic</h1>
           <p style={{fontSize: '1.0625rem', color: 'var(--text-secondary)', fontWeight: 300, maxWidth: '620px', lineHeight: 1.75}}>
-            Helping establish Eyeconic's first shared component library across Creative, Development, and accessibility teams — eliminating version conflicts and creating a single source of truth where none existed.
+            Helping replace a basic style guide with a full design system shared across Creative, Development, and accessibility teams — cutting version conflicts and creating a single source of truth for design and dev.
           </p>
         </div>
 

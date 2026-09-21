@@ -22,7 +22,7 @@ export default function CaseStudy1() {
           </div>
           <h1 className="t-headline" style={{marginBottom: '1rem'}}>Reducing Order Cancellations at Eyeconic</h1>
           <p style={{fontSize: '1.0625rem', color: 'var(--text-secondary)', fontWeight: 300, maxWidth: '620px', lineHeight: 1.75}}>
-            Diagnosing a cluster of checkout friction points and shipping targeted UI interventions that moved the cancellation rate from 10.5% to 8.3% — surpassing the executive-set target of below 10%.
+            Diagnosing a cluster of checkout friction points and shipping targeted UI interventions that moved the cancellation rate from 10.5% to 8.3% — surpassing the business target of below 10%.
           </p>
         </div>
 
@@ -130,8 +130,8 @@ export default function CaseStudy1() {
               <div>
                 <p className="t-label" style={{marginBottom: '0.75rem'}}>Outcome</p>
                 <div className="sidebar-stat">
-                  <div className="sidebar-stat-value">−2.2%</div>
-                  <div className="sidebar-stat-label">Cancellation rate reduction</div>
+                  <div className="sidebar-stat-value">−2.2 pts</div>
+                  <div className="sidebar-stat-label">Cancellation rate, 10.5% → 8.3% of placed orders</div>
                 </div>
               </div>
               <div className="sidebar-divider" />

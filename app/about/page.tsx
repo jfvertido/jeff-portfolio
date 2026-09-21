@@ -11,7 +11,7 @@ export default function About() {
           <span className="breadcrumb-current">About</span>
         </div>
 
-        <div style={{display: 'grid', gridTemplateColumns: '1fr 340px', gap: '5rem', alignItems: 'start'}}>
+        <div className="about-layout">
           {/* Left col */}
           <div>
             <p className="t-label" style={{marginBottom: '1rem'}}>About</p>
@@ -19,13 +19,13 @@ export default function About() {
               I bridge design and engineering —<br/>so intent survives the handoff.
             </h1>
             <p className="t-body" style={{color: 'var(--text-secondary)', marginBottom: '1rem'}}>
-              I'm a UX/UI Designer and Front-End Developer with 5+ years working in eCommerce, currently at VSP Global's Eyeconic platform. My work sits at the intersection of design systems, component architecture, and accessibility-compliant front-end implementation.
+              I'm a UX/UI Designer and Front-End Developer with 10+ years of web experience, the last seven at VSP Vision on the Eyeconic eCommerce platform. My work sits at the intersection of design systems, component architecture, and accessibility-compliant front-end implementation.
             </p>
             <p className="t-body" style={{color: 'var(--text-secondary)', marginBottom: '1rem'}}>
               I design in Figma and build in code — taking projects from mid-fidelity wireframes through stakeholder review and into production without losing intent at the handoff. That hybrid ownership is where I do my best work.
             </p>
             <p className="t-body" style={{color: 'var(--text-secondary)', marginBottom: '2.5rem'}}>
-              I'm actively learning React and deepening my work in design systems and AI-informed UX. I've completed four IxDF masterclasses and a Designlab AI certification — applying those frameworks directly to production work at Eyeconic.
+              I'm deepening my work in design systems and AI-assisted design and engineering. I've completed 14 certifications and courses across IxDF, Anthropic, Designlab, and Udemy — including Anthropic's Claude Code in Action — and my team won 1st place at our internal hackathon (Sep 2026) with lumen-vision, a Claude-based benefits-guide assistant.
             </p>
 
             <div style={{display: 'flex', gap: '1rem'}}>
@@ -37,30 +37,20 @@ export default function About() {
             <div style={{marginTop: '4rem'}}>
               <p className="t-label" style={{marginBottom: '1.5rem'}}>Core Competencies</p>
               <div className="about-grid">
-                <div className="about-cell">
-                  <div className="about-cell-label">Design & UX</div>
-                  <ul className="skills-list">
-                    {['UX Design & Research', 'UI Design', 'Information Architecture', 'Wireframing & Prototyping', 'Design Systems', 'Atomic Design Principles', 'Design Tokens', 'UX Writing'].map(s => <li key={s}>{s}</li>)}
-                  </ul>
-                </div>
-                <div className="about-cell">
-                  <div className="about-cell-label">Engineering</div>
-                  <ul className="skills-list">
-                    {['HTML5 / CSS3', 'JavaScript', 'Responsive Web Development', 'WCAG 2.1 AA / 508 Compliance', 'Salesforce Commerce Cloud', 'Component Architecture', 'Cross-browser Compatibility', 'QA & User Testing'].map(s => <li key={s}>{s}</li>)}
-                  </ul>
-                </div>
-                <div className="about-cell">
-                  <div className="about-cell-label">Tools</div>
-                  <ul className="skills-list">
-                    {['Figma (Design Systems, Prototyping)', 'Visual Studio Code', 'Adobe Creative Cloud', 'Next.js (learning)', 'React (learning)', 'jQuery / AJAX', 'Version Control Systems'].map(s => <li key={s}>{s}</li>)}
-                  </ul>
-                </div>
-                <div className="about-cell">
-                  <div className="about-cell-label">Process</div>
-                  <ul className="skills-list">
-                    {['Cross-functional collaboration', 'Stakeholder presentation', 'Design-to-dev handoff', 'Accessibility auditing', 'Component documentation', 'AI-informed UX workflows'].map(s => <li key={s}>{s}</li>)}
-                  </ul>
-                </div>
+                {[
+                  { label: 'Design & UX', items: ['UX Design & Research', 'UI & Visual Design', 'Information Architecture', 'Wireframing & Prototyping', 'Design Systems', 'Atomic Design Principles', 'Design Tokens', 'UX Writing', 'A/B Testing'] },
+                  { label: 'Engineering', items: ['HTML5 / CSS3', 'JavaScript', 'Responsive Web Development', 'WCAG 2.1 AA Accessibility', 'Salesforce Commerce Cloud', 'Component Architecture', 'Cross-browser Compatibility', 'QA & UAT'] },
+                  { label: 'AI & Automation', items: ['Claude & Claude Code', 'Claude Skills', 'Prompt Engineering', 'LLM Application Architecture', 'AI Output Verification', 'AI-assisted Workflows'] },
+                  { label: 'Tools', items: ['Figma (Design Systems, Prototyping)', 'Visual Studio Code', 'Git & GitHub', 'Vercel', 'Adobe Creative Suite', 'Next.js (learning)', 'React (learning)', 'jQuery'] },
+                  { label: 'Process', items: ['Cross-functional Collaboration', 'Stakeholder Presentation & Management', 'Design-to-dev Handoff', 'Accessibility Auditing', 'Component Documentation', 'Mentoring & Design Critique'] },
+                ].map(g => (
+                  <div key={g.label} className="about-cell">
+                    <div className="about-cell-label">{g.label}</div>
+                    <ul className="skills-list">
+                      {g.items.map(i => <li key={i}>{i}</li>)}
+                    </ul>
+                  </div>
+                ))}
               </div>
             </div>
 
@@ -70,34 +60,47 @@ export default function About() {
               <div style={{display: 'flex', flexDirection: 'column', gap: '0'}}>
                 {[
                   {
-                    role: 'eCommerce Digital Marketing Specialist',
-                    company: 'Eyeconic / VSP Global',
+                    role: 'eCommerce Digital Specialist',
+                    company: 'VSP Vision (Eyeconic)',
                     period: 'July 2019 – Present',
                     bullets: [
-                      'Lead UX design and front-end development for a major eyewear eCommerce platform',
-                      'Contributed to design system initiative establishing shared component library across Creative, Dev, and accessibility teams',
-                      'Designed and implemented front-end changes reducing order cancellations from 10.5% to 8.3%',
-                      'Led IA and implementation for three educational content pages',
-                      'Maintain 100% on-time delivery record across all campaign launches',
+                      'Design and build front-end experiences from wireframe to production on Salesforce Commerce Cloud, presenting to Merchandising, Marketing, and Creative, then running QA and UAT across viewports and WCAG 2.1 AA',
+                      "Designed and built the changes behind our team's order-cancellation initiative — moving shipping, delivery, and Rx compatibility info earlier in the flow — cutting cancellations from 10.5% to 8.3% against a target of under 10%",
+                      'Helped replace a basic style guide with a full design system: audited templates, rebuilt 4–5 landing pages in Figma, documented four core components, and rolled it out to three teams in March 2025',
+                      'Built the design token architecture and maintain the design system documentation',
+                      'Audited two buying-guide pages, identified a missing third, and led structure and IA for all three with a copywriter; launched September 2025',
+                      'Contribute to the yearly Reduce Bounce Rate directive — running A/B tests on site content and curating customer feedback to surface pain points',
+                      'Built internal tools for graphic designers to place artwork into my layouts, doubling as design proofs for Marketing and Merchandising approval',
+                      'Prototype same-day so teams can validate ideas quickly',
+                      'Mentor teammates, join design critiques, weigh in on maintainability and launch timing, and flag assets that miss WCAG requirements',
+                      'Team won 1st place / grand prize at our internal hackathon (Sep 2026) with lumen-vision, a Claude-based benefits-guide assistant — I handled design, prompt architecture, and engineering',
                     ]
                   },
                   {
-                    role: 'Digital Visual Designer',
-                    company: 'YDesign / Lumens',
+                    role: 'Senior Digital Visual Designer',
+                    company: 'Lumens',
                     period: 'December 2015 – July 2019',
                     bullets: [
-                      'Designed and coded responsive layouts and email campaigns for lumens.com',
-                      'Created high-converting affiliate banner artwork for multi-channel marketing',
-                      'Developed wireframes, interactive mockups, and functional prototypes',
+                      'Built a reusable component library and style guide with the team',
+                      'Created prototypes that became production features',
+                      'Shipped HTML, CSS, and JavaScript for layouts, campaigns, and marketing pages',
+                      'Collaborated with UX researchers on data-informed iterations',
                     ]
                   },
                   {
-                    role: 'Web Designer / Developer / Consultant',
+                    role: 'Senior Web Developer',
                     company: 'Prestwood IT Solutions',
                     period: 'June 2015 – December 2015',
                     bullets: [
-                      'Provided creative direction and technical implementation for diverse client portfolio',
-                      'Managed full-stack website development lifecycle from concept to production',
+                      'Front-end and WordPress development with responsive web design',
+                    ]
+                  },
+                  {
+                    role: 'Web Support Specialist',
+                    company: 'I-Tul Design & Software, Inc.',
+                    period: 'July 2013 – January 2015',
+                    bullets: [
+                      'Web support and WordPress development, plus online customer support',
                     ]
                   },
                 ].map(exp => (
@@ -121,7 +124,7 @@ export default function About() {
           </div>
 
           {/* Right col */}
-          <div style={{position: 'sticky', top: '80px'}}>
+          <div>
             {/* Contact */}
             <div className="sidebar-card" style={{marginBottom: '1.5rem'}}>
               <p className="t-label">Contact</p>
@@ -138,33 +141,42 @@ export default function About() {
 
             {/* Certifications */}
             <div className="sidebar-card">
-              <p className="t-label" style={{marginBottom: '0.875rem'}}>AI & UX Certifications</p>
+              <p className="t-label" style={{marginBottom: '0.875rem'}}>Certifications & Training</p>
 
-              <div style={{marginBottom: '1rem'}}>
-                <div className="cert-org" style={{marginBottom: '0.5rem'}}>Interaction Design Foundation</div>
-                {[
-                  'AI-Powered UX Design',
-                  'Human-Centered Design for AI',
-                  'Design Patterns for AI UX',
-                  'Design Tokens',
-                  'Become a UX Designer from Scratch',
-                ].map(c => (
-                  <div key={c} className="cert-item">
-                    <span className="cert-name">{c}</span>
-                    <span className="cert-org">Certified</span>
-                  </div>
-                ))}
-              </div>
-
-              <div className="sidebar-divider" />
-
-              <div style={{marginTop: '1rem'}}>
-                <div className="cert-org" style={{marginBottom: '0.5rem'}}>Designlab</div>
-                <div className="cert-item">
-                  <span className="cert-name">AI for UX Design</span>
-                  <span className="cert-org">Certified · July 2025 · ID: ECB856</span>
+              {[
+                { org: 'Anthropic', items: [
+                  ['Claude Academy: Claude Code in Action', 'Sep 2026'],
+                  ['AI Fluency Framework & Foundations', 'Apr 2026'],
+                ]},
+                { org: 'Interaction Design Foundation', items: [
+                  ['Bring AI Into Your Design System: Hands-On Demo', 'Mar 2026'],
+                  ['Object-Oriented UI Design', 'Mar 2026'],
+                  ['AI for Designers', 'Jul 2025'],
+                  ['AI-Powered UX Design', 'Nov 2024'],
+                  ['Design Tokens: Powering Your Design System', 'Jun 2024'],
+                  ['Design Patterns for AI UX', 'Apr 2024'],
+                  ['Human-Centered Design for AI', 'Dec 2023'],
+                  ['Design KPIs: From Insights to Impact', 'Oct 2023'],
+                  ['Become a UX Designer from Scratch', 'Jul 2022'],
+                ]},
+                { org: 'Designlab', items: [
+                  ['AI for UX Design', 'Jul 2025 · ID: ECB856'],
+                ]},
+                { org: 'Udemy', items: [
+                  ['Git with Visual Studio Code', 'Jun 2026'],
+                  ['Complete Obsidian: Build Your Second Brain', 'Jun 2026'],
+                ]},
+              ].map(g => (
+                <div key={g.org} style={{marginBottom: '1rem'}}>
+                  <div className="cert-org" style={{marginBottom: '0.5rem'}}>{g.org}</div>
+                  {g.items.map(([name, meta]) => (
+                    <div key={name} className="cert-item">
+                      <span className="cert-name">{name}</span>
+                      <span className="cert-org">{meta}</span>
+                    </div>
+                  ))}
                 </div>
-              </div>
+              ))}
 
               <div className="sidebar-divider" />
 
@@ -172,7 +184,7 @@ export default function About() {
                 <div className="cert-org" style={{marginBottom: '0.5rem'}}>Education</div>
                 <div className="cert-item">
                   <span className="cert-name">Multimedia Arts + Web Design</span>
-                  <span className="cert-org">Sessions College for Professional Design</span>
+                  <span className="cert-org">Sessions College for Professional Design · 2013</span>
                 </div>
                 <div className="cert-item">
                   <span className="cert-name">A.S. Computer Science</span>

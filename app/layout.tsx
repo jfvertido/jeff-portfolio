@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'Jeff Vertido — Design Engineer',
+  title: 'Jeff Vertido — UX/UI Designer | Design Systems | Front-End',
   description: 'UX Designer and Front-End Developer bridging design systems, component architecture, and accessibility-compliant implementation.',
 }
 
@@ -22,7 +22,7 @@ function Nav() {
   return (
     <nav>
       <div className="nav-inner">
-        <a href="/" className="nav-logo">Jeff Vertido <span>/ Design Engineer</span></a>
+        <a href="/" className="nav-logo">Jeff Vertido <span>/ UX/UI Designer</span></a>
         <div className="nav-links">
           <a href="/#work">Work</a>
           <a href="/about">About</a>
@@ -37,7 +37,7 @@ function Footer() {
   return (
     <footer>
       <div className="footer-inner">
-        <span className="t-label">© 2025 Jeff Vertido</span>
+        <span className="t-label">© 2026 Jeff Vertido</span>
         <div className="footer-links">
           <a href="mailto:jvertido@live.com">jvertido@live.com</a>
           <a href="https://design-token-visualizer.vercel.app" target="_blank" rel="noopener">Token Visualizer ↗</a>
