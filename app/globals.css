@@ -263,7 +263,7 @@ img { max-width: 100%; display: block; }
 .skills-list { display: flex; flex-direction: column; gap: 0.4rem; }
 .skills-list li { font-size: 0.9rem; color: var(--text-secondary); font-weight: 300; list-style: none; }
 
-.cert-item { display: flex; flex-direction: column; gap: 0.25rem; padding: 0.875rem 0; border-bottom: 1px solid var(--border-subtle); }
+.cert-item { display: flex; flex-direction: column; gap: 0.25rem; padding: 0.875rem 0; border-bottom: 1px solid var(--border); }
 .cert-item:last-child { border-bottom: none; padding-bottom: 0; }
 .cert-name { font-size: 0.9rem; font-weight: 500; }
 .cert-org { font-size: 0.8rem; color: var(--text-tertiary); font-family: var(--font-mono); }
@@ -328,12 +328,12 @@ footer {
    The palette is all light tones, so it drives backgrounds, borders and fills;
    text and accent use darker neutrals from the same family (all AA-checked). */
 :root {
-  --ink: #212529;          /* 15.4:1 on white */
+  --ink: #212529;          /* 13.0:1 on --color-2 */
   --ink-hover: #343A40;
-  --ink-secondary: #495057; /* 8.2:1 on white, 6.3:1 on --color-3 */
-  --ink-tertiary: #5C636A;  /* 6.1:1 on white, 4.7:1 on --color-3 */
+  --ink-secondary: #495057; /* 6.9:1 on --color-2, 6.3:1 on --color-3 */
+  --ink-tertiary: #5C636A;  /* 5.1:1 on --color-2, 4.7:1 on --color-3 */
   --bg: var(--color-1);
-  --surface: #FFFFFF;
+  --surface: var(--color-2);
   --border: var(--color-3);
   --border-subtle: var(--color-2);
   --text-primary: var(--ink);
@@ -341,8 +341,8 @@ footer {
   --text-tertiary: var(--ink-tertiary);
   --accent: var(--ink);
   --accent-hover: var(--ink-hover);
-  --accent-muted: var(--color-2);
-  --tag-bg: var(--color-3);
+  --accent-muted: var(--color-3);
+  --tag-bg: var(--color-4);
   --tag-text: var(--ink);
   --link: var(--ink);
   --nav-bg: rgba(var(--color-1-rgb), 0.9);
@@ -372,13 +372,13 @@ footer {
 .section-label::after { background: var(--border); }
 .work-grid { gap: 1.25rem; background: none; border: none; border-radius: 0; overflow: visible; }
 .work-card { border-radius: var(--radius-lg); border: 1px solid var(--border); padding: 2.25rem; }
-.work-card:hover { background: #fff; border-color: var(--accent); box-shadow: 0 10px 30px -14px rgba(33, 37, 41, 0.35); }
+.work-card:hover { background: var(--color-1); border-color: var(--accent); box-shadow: 0 10px 30px -14px rgba(33, 37, 41, 0.35); }
 .work-card .t-title { font-family: var(--font-display); font-size: 1.5rem !important; font-weight: 400 !important; letter-spacing: -0.02em; }
 .work-card-arrow { background: var(--accent); border-color: var(--accent); color: #fff; }
 .work-card:hover .work-card-arrow { border-color: var(--accent); color: #fff; }
 .tag { font-weight: 500; }
-.sidebar-card { background: #fff; }
-.outcome-highlight { background: var(--color-2); border-color: var(--color-4); }
+.sidebar-card { background: var(--surface); }
+.outcome-highlight { background: var(--color-3); border-color: var(--color-4); }
 .outcome-highlight .metric,
 .sidebar-stat-value { font-family: var(--font-display); font-weight: 400; color: var(--accent); }
 .pullquote { border-left: 3px solid var(--accent); font-family: var(--font-display); font-size: 1.25rem; font-weight: 400; }
@@ -386,7 +386,7 @@ footer {
 .t-title { font-family: var(--font-display); font-weight: 400; }
 .prose ul li::before { content: '•'; color: var(--accent); }
 .case-nav-item { border-radius: var(--radius-lg); }
-.case-nav-item:hover { border-color: var(--accent); background: #fff; }
+.case-nav-item:hover { border-color: var(--accent); background: var(--color-1); }
 footer { background: var(--text-primary); border: none; }
 footer .t-label,
 .footer-links a { color: var(--color-3); }
