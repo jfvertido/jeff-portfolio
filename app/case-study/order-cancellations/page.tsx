@@ -5,13 +5,13 @@ export default function CaseStudy1() {
     <div className="page-enter" style={{paddingTop: '80px'}}>
       <div className="container" style={{paddingTop: '3rem', paddingBottom: '5rem'}}>
 
-        <div className="breadcrumb">
+        <nav className="breadcrumb" aria-label="Breadcrumb">
           <a href="/">Home</a>
-          <span className="breadcrumb-sep">›</span>
+          <span className="breadcrumb-sep" aria-hidden="true">›</span>
           <a href="/#work">Work</a>
-          <span className="breadcrumb-sep">›</span>
-          <span className="breadcrumb-current">Order Cancellations</span>
-        </div>
+          <span className="breadcrumb-sep" aria-hidden="true">›</span>
+          <span className="breadcrumb-current" aria-current="page">Order Cancellations</span>
+        </nav>
 
         {/* Header */}
         <div style={{marginBottom: '3rem'}}>

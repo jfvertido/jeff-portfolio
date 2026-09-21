@@ -5,11 +5,11 @@ export default function About() {
     <div className="page-enter" style={{paddingTop: '80px'}}>
       <div className="container" style={{paddingTop: '3rem', paddingBottom: '5rem'}}>
 
-        <div className="breadcrumb">
+        <nav className="breadcrumb" aria-label="Breadcrumb">
           <a href="/">Home</a>
-          <span className="breadcrumb-sep">›</span>
-          <span className="breadcrumb-current">About</span>
-        </div>
+          <span className="breadcrumb-sep" aria-hidden="true">›</span>
+          <span className="breadcrumb-current" aria-current="page">About</span>
+        </nav>
 
         <div className="about-layout">
           {/* Left col */}
@@ -30,12 +30,12 @@ export default function About() {
 
             <div style={{display: 'flex', gap: '1rem'}}>
               <a href="mailto:jvertido@live.com" className="btn btn-primary">Get in touch</a>
-              <a href="https://www.interaction-design.org/members/jeff-vertido" target="_blank" rel="noopener" className="btn btn-secondary">IxDF Profile ↗</a>
+              <a href="https://www.interaction-design.org/members/jeff-vertido" target="_blank" rel="noopener" className="btn btn-secondary">IxDF Profile <span aria-hidden="true">↗</span><span className="sr-only">(opens in a new tab)</span></a>
             </div>
 
             {/* Skills grid */}
             <div style={{marginTop: '4rem'}}>
-              <p className="t-label" style={{marginBottom: '1.5rem'}}>Core Competencies</p>
+              <h2 className="t-label" style={{marginBottom: '1.5rem'}}>Core Competencies</h2>
               <div className="about-grid">
                 {[
                   { label: 'Design & UX', items: ['UX Design & Research', 'UI & Visual Design', 'Information Architecture', 'Wireframing & Prototyping', 'Design Systems', 'Atomic Design Principles', 'Design Tokens', 'UX Writing', 'A/B Testing'] },
@@ -45,8 +45,8 @@ export default function About() {
                   { label: 'Process', items: ['Cross-functional Collaboration', 'Stakeholder Presentation & Management', 'Design-to-dev Handoff', 'Accessibility Auditing', 'Component Documentation', 'Mentoring & Design Critique'] },
                 ].map(g => (
                   <div key={g.label} className="about-cell">
-                    <div className="about-cell-label">{g.label}</div>
-                    <ul className="skills-list">
+                    <h3 className="about-cell-label">{g.label}</h3>
+                    <ul className="skills-list" role="list">
                       {g.items.map(i => <li key={i}>{i}</li>)}
                     </ul>
                   </div>
@@ -56,7 +56,7 @@ export default function About() {
 
             {/* Experience */}
             <div style={{marginTop: '4rem'}}>
-              <p className="t-label" style={{marginBottom: '1.5rem'}}>Experience</p>
+              <h2 className="t-label" style={{marginBottom: '1.5rem'}}>Experience</h2>
               <div style={{display: 'flex', flexDirection: 'column', gap: '0'}}>
                 {[
                   {
@@ -106,14 +106,14 @@ export default function About() {
                 ].map(exp => (
                   <div key={exp.company} style={{padding: '1.75rem 0', borderBottom: '1px solid var(--border)'}}>
                     <div style={{display: 'flex', justifyContent: 'space-between', marginBottom: '0.25rem', gap: '1rem', flexWrap: 'wrap'}}>
-                      <span style={{fontWeight: 500, fontSize: '0.9375rem'}}>{exp.role}</span>
+                      <h3 style={{fontWeight: 500, fontSize: '0.9375rem'}}>{exp.role}</h3>
                       <span className="t-small" style={{color: 'var(--text-tertiary)', fontFamily: 'var(--font-mono)', flexShrink: 0}}>{exp.period}</span>
                     </div>
                     <div className="t-small" style={{color: 'var(--text-secondary)', marginBottom: '0.75rem'}}>{exp.company}</div>
-                    <ul style={{listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '0.375rem'}}>
+                    <ul role="list" style={{listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '0.375rem'}}>
                       {exp.bullets.map(b => (
                         <li key={b} style={{display: 'flex', gap: '0.5rem', fontSize: '0.875rem', color: 'var(--text-secondary)', fontWeight: 300}}>
-                          <span style={{color: 'var(--text-tertiary)', flexShrink: 0}}>—</span>{b}
+                          <span aria-hidden="true" style={{color: 'var(--text-tertiary)', flexShrink: 0}}>—</span>{b}
                         </li>
                       ))}
                     </ul>
@@ -127,21 +127,21 @@ export default function About() {
           <div>
             {/* Contact */}
             <div className="sidebar-card" style={{marginBottom: '1.5rem'}}>
-              <p className="t-label">Contact</p>
+              <h2 className="t-label">Contact</h2>
               <div style={{display: 'flex', flexDirection: 'column', gap: '0.5rem'}}>
-                <a href="mailto:jvertido@live.com" style={{fontSize: '0.9rem', color: 'var(--text-primary)'}}>jvertido@live.com</a>
+                <a href="mailto:jvertido@live.com" className="contact-link" style={{fontSize: '0.9rem', color: 'var(--text-primary)'}}>jvertido@live.com</a>
                 <span style={{fontSize: '0.9rem', color: 'var(--text-secondary)'}}>Sacramento, CA</span>
               </div>
               <div className="sidebar-divider" />
               <div style={{display: 'flex', flexDirection: 'column', gap: '0.625rem'}}>
-                <a href="https://design-token-visualizer.vercel.app" target="_blank" rel="noopener" className="btn btn-secondary" style={{justifyContent: 'center', fontSize: '0.8rem'}}>Token Visualizer ↗</a>
-                <a href="https://www.interaction-design.org/members/jeff-vertido" target="_blank" rel="noopener" className="btn btn-secondary" style={{justifyContent: 'center', fontSize: '0.8rem'}}>IxDF Profile ↗</a>
+                <a href="https://design-token-visualizer.vercel.app" target="_blank" rel="noopener" className="btn btn-secondary" style={{justifyContent: 'center', fontSize: '0.8rem'}}>Token Visualizer <span aria-hidden="true">↗</span><span className="sr-only">(opens in a new tab)</span></a>
+                <a href="https://www.interaction-design.org/members/jeff-vertido" target="_blank" rel="noopener" className="btn btn-secondary" style={{justifyContent: 'center', fontSize: '0.8rem'}}>IxDF Profile <span aria-hidden="true">↗</span><span className="sr-only">(opens in a new tab)</span></a>
               </div>
             </div>
 
             {/* Certifications */}
             <div className="sidebar-card">
-              <p className="t-label" style={{marginBottom: '0.875rem'}}>Certifications & Training</p>
+              <h2 className="t-label" style={{marginBottom: '0.875rem'}}>Certifications & Training</h2>
 
               {[
                 { org: 'Anthropic', items: [
@@ -168,7 +168,7 @@ export default function About() {
                 ]},
               ].map(g => (
                 <div key={g.org} style={{marginBottom: '1rem'}}>
-                  <div className="cert-org" style={{marginBottom: '0.5rem'}}>{g.org}</div>
+                  <h3 className="cert-org" style={{marginBottom: '0.5rem', fontWeight: 400}}>{g.org}</h3>
                   {g.items.map(([name, meta]) => (
                     <div key={name} className="cert-item">
                       <span className="cert-name">{name}</span>
@@ -181,7 +181,7 @@ export default function About() {
               <div className="sidebar-divider" />
 
               <div style={{marginTop: '1rem'}}>
-                <div className="cert-org" style={{marginBottom: '0.5rem'}}>Education</div>
+                <h3 className="cert-org" style={{marginBottom: '0.5rem', fontWeight: 400}}>Education</h3>
                 <div className="cert-item">
                   <span className="cert-name">Multimedia Arts + Web Design</span>
                   <span className="cert-org">Sessions College for Professional Design · 2013</span>

@@ -27,12 +27,12 @@ export default function Home() {
           <div className="stats-grid">
             {[
               { value: '10+', label: 'Years designing and building for the web' },
-              { value: '10.5→8.3%', label: 'Order cancellation rate reduced' },
+              { value: '10.5→8.3%', srValue: '10.5 to 8.3 percent', label: 'Order cancellation rate reduced' },
               { value: '1st', label: 'Internal VSP/Eyeconic hackathon, Sep 2026' },
               { value: '14', label: 'Certifications & courses (IxDF, Anthropic, Designlab, Udemy)' },
             ].map(s => (
               <div key={s.label}>
-                <div style={{fontSize: '1.25rem', fontWeight: 300, letterSpacing: '-0.02em', marginBottom: '0.25rem'}}>{s.value}</div>
+                <div style={{fontSize: '1.25rem', fontWeight: 300, letterSpacing: '-0.02em', marginBottom: '0.25rem'}}>{'srValue' in s ? <><span aria-hidden="true">{s.value}</span><span className="sr-only">{s.srValue}</span></> : s.value}</div>
                 <div className="t-small" style={{color: 'var(--text-tertiary)'}}>{s.label}</div>
               </div>
             ))}
@@ -44,7 +44,7 @@ export default function Home() {
       <section className="section" id="work">
         <div className="container">
           <div className="section-label">
-            <span className="t-label">Selected Work</span>
+            <h2 className="t-label">Selected Work</h2>
           </div>
 
           <div className="work-grid">
@@ -81,10 +81,10 @@ export default function Home() {
       <section className="section" style={{paddingTop: 0}}>
         <div className="container">
           <div className="section-label">
-            <span className="t-label">Live Project</span>
+            <h2 className="t-label">Live Project</h2>
           </div>
 
-          <a href="https://design-token-visualizer.vercel.app" target="_blank" rel="noopener" className="work-card" style={{border: '1px solid var(--border)', borderRadius: 'var(--radius-lg)', display: 'grid', gridTemplateColumns: '1fr auto', padding: '2.5rem'}}>
+          <a href="https://design-token-visualizer.vercel.app" target="_blank" rel="noopener" className="work-card" aria-label="Design Token Visualizer (opens in a new tab)" style={{border: '1px solid var(--border)', borderRadius: 'var(--radius-lg)', display: 'grid', gridTemplateColumns: '1fr auto', padding: '2.5rem'}}>
             <div className="work-card-meta">
               <span className="t-label">Personal Project · Next.js · Deployed on Vercel</span>
               <h3 className="t-title" style={{fontSize: '1.25rem', fontWeight: 400}}>Design Token Visualizer</h3>
@@ -95,7 +95,7 @@ export default function Home() {
                 {['Next.js', 'React', 'Design Tokens', 'Tailwind'].map(t => <span key={t} className="tag">{t}</span>)}
               </div>
             </div>
-            <div className="work-card-arrow">↗</div>
+            <div className="work-card-arrow" aria-hidden="true">↗</div>
           </a>
         </div>
       </section>
@@ -103,7 +103,7 @@ export default function Home() {
       {/* Positioning strip */}
       <section style={{background: 'var(--surface)', borderTop: '1px solid var(--border)', borderBottom: '1px solid var(--border)', padding: '4rem 0'}}>
         <div className="container-narrow" style={{textAlign: 'center'}}>
-          <p className="t-label" style={{marginBottom: '1.5rem'}}>How I work</p>
+          <h2 className="t-label" style={{marginBottom: '1.5rem'}}>How I work</h2>
           <p style={{fontSize: '1.25rem', fontWeight: 300, letterSpacing: '-0.01em', lineHeight: 1.6, color: 'var(--text-primary)'}}>
             "Most handoff problems aren't communication problems — they're ownership problems. I stay in the work from first wireframe to final QA, so the intent survives."
           </p>
@@ -130,7 +130,7 @@ function WorkCard({ href, number, title, description, tags, year, featured }: {
           {tags.map(t => <span key={t} className="tag">{t}</span>)}
         </div>
       </div>
-      <div className="work-card-arrow">→</div>
+      <div className="work-card-arrow" aria-hidden="true">→</div>
     </a>
   )
 }
