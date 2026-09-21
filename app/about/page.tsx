@@ -64,7 +64,7 @@ export default function About() {
                     company: 'VSP Vision (Eyeconic)',
                     period: 'July 2019 – Present',
                     bullets: [
-                      'Design and build front-end experiences from wireframe to production on Salesforce Commerce Cloud, presenting to Merchandising, Marketing, and Creative, then running QA and UAT across viewports and WCAG 2.1 AA',
+                      'Design and build front-end experiences from wireframe to production on Salesforce Commerce Cloud, presenting to Merchandising, Marketing, and Creative, then running QA and UAT across viewports and WCAG 2.2 AA',
                       "Designed and built the changes behind our team's order-cancellation initiative — moving shipping, delivery, and Rx compatibility info earlier in the flow — cutting cancellations from 10.5% to 8.3% against a target of under 10%",
                       'Helped replace a basic style guide with a full design system: audited templates, rebuilt 4–5 landing pages in Figma, documented four core components, and rolled it out to three teams in March 2025',
                       'Built the design token architecture and maintain the design system documentation',
