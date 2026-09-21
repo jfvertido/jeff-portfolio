@@ -84,7 +84,7 @@ export default function Home() {
             <h2 className="t-label">Live Project</h2>
           </div>
 
-          <a href="https://design-token-visualizer.vercel.app" target="_blank" rel="noopener" className="work-card" aria-label="Design Token Visualizer (opens in a new tab)" style={{border: '1px solid var(--border)', borderRadius: 'var(--radius-lg)', display: 'grid', gridTemplateColumns: '1fr auto', padding: '2.5rem'}}>
+          <a href="https://design-token-visualizer.vercel.app" target="_blank" rel="noopener" className="work-card" style={{border: '1px solid var(--border)', borderRadius: 'var(--radius-lg)', display: 'grid', gridTemplateColumns: '1fr auto', padding: '2.5rem'}}>
             <div className="work-card-meta">
               <span className="t-label">Personal Project · Next.js · Deployed on Vercel</span>
               <h3 className="t-title" style={{fontSize: '1.25rem', fontWeight: 400}}>Design Token Visualizer</h3>
@@ -96,6 +96,7 @@ export default function Home() {
               </div>
             </div>
             <div className="work-card-arrow" aria-hidden="true">↗</div>
+            <span className="sr-only">(opens in a new tab)</span>
           </a>
         </div>
       </section>
