@@ -387,10 +387,10 @@ footer {
 .prose ul li::before { content: '•'; color: var(--accent); }
 .case-nav-item { border-radius: var(--radius-lg); }
 .case-nav-item:hover { border-color: var(--accent); background: var(--color-1); }
-footer { background: var(--text-primary); border: none; }
-footer .t-label,
-.footer-links a { color: var(--color-3); }
-.footer-links a:hover { color: #fff; }
+footer { background: var(--color-3); border-top: 1px solid var(--color-4); }
+footer .t-label { color: var(--text-secondary); }
+.footer-links a { color: var(--text-primary); }
+.footer-links a:hover { text-decoration-thickness: 2px; }
 
 /* Accessibility (WCAG 2.2 AA) */
 html { scroll-padding-top: 80px; }
@@ -419,7 +419,6 @@ main:focus { outline: none; }
 :focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
 .work-card:focus-visible, .case-nav-item:focus-visible { border-radius: var(--radius-lg); }
 .btn:focus-visible { border-radius: var(--radius-btn); }
-footer :focus-visible { outline-color: #FFFFFF; }
 
 /* Links inside text must not rely on color alone (1.4.1) */
 .prose a, .breadcrumb a, .footer-links a, .contact-link {
