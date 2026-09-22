@@ -16,7 +16,7 @@ export default function About() {
           <div>
             <p className="t-label" style={{marginBottom: '1rem'}}>About</p>
             <h1 className="t-headline" style={{marginBottom: '1.5rem'}}>
-              I bridge design and engineering —<br/>so intent survives the handoff.
+              I bridge design and engineering —{' '}<br/>so intent survives the handoff.
             </h1>
             <p className="t-body" style={{color: 'var(--text-secondary)', marginBottom: '1rem'}}>
               I'm a UX/UI Designer and Front-End Developer with 10+ years of web experience, the last seven at VSP Vision on the Eyeconic eCommerce platform. My work sits at the intersection of design systems, component architecture, and accessibility-compliant front-end implementation.

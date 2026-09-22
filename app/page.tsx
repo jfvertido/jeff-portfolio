@@ -8,7 +8,7 @@ export default function Home() {
             <span className="t-label">UX/UI Designer · Design Systems · Front-End</span>
           </div>
           <h1 className="t-display hero-headline">
-            Design that holds<br />
+            Design that holds{' '}<br />
             all the way to code.
           </h1>
           <p className="hero-sub">
