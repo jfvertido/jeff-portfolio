@@ -118,20 +118,22 @@ function WorkCard({ href, number, title, description, tags, year, featured }: {
   href: string; number: string; title: string; description: string; tags: string[]; year: string; featured?: boolean;
 }) {
   return (
-    <a href={href} className="work-card" style={featured ? {background: 'var(--accent-muted)'} : {}}>
+    <article className={`work-card work-card--stretched${featured ? ' work-card--featured' : ''}`}>
       <div className="work-card-meta">
         <div style={{display: 'flex', alignItems: 'center', gap: '0.75rem'}}>
           <span className="t-label">{number}</span>
-          {featured && <span className="tag" style={{background: 'var(--accent)', color: 'var(--on-accent)', fontFamily: 'var(--font-mono)'}}>Featured</span>}
+          {featured && <span className="tag tag--featured">Featured</span>}
           <span className="t-label" style={{marginLeft: 'auto'}}>{year}</span>
         </div>
-        <h3 className="t-title" style={{fontSize: '1.125rem', fontWeight: 400}}>{title}</h3>
+        <h3 className="t-title" style={{fontSize: '1.125rem', fontWeight: 400}}>
+          <a href={href} className="work-card-link">{title}</a>
+        </h3>
         <p className="t-small" style={{color: 'var(--text-secondary)', fontWeight: 300, lineHeight: 1.65, maxWidth: '560px'}}>{description}</p>
         <div className="work-card-tags">
           {tags.map(t => <span key={t} className="tag">{t}</span>)}
         </div>
       </div>
       <div className="work-card-arrow" aria-hidden="true">→</div>
-    </a>
+    </article>
   )
 }
