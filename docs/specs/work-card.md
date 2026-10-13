@@ -1,7 +1,7 @@
 ---
 type: component-spec
 component: WorkCard
-status: ready-for-agents            # draft | ready-for-agents | in-review | done
+status: done            # draft | ready-for-agents | in-review | done
 repo: jeff-portfolio
 penpot: none (the current rendering is the baseline)
 tokens: app/globals.css (:root blocks, second block wins)
