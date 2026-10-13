@@ -150,22 +150,29 @@ Decided 2026-10-12:
 - Every variant keeps a visible link cue at all widths.
 - Every variant moves the featured card's inline styles into CSS classes.
 
+- Variant C (stretched link) was chosen after comparing A, B and C. See section 12.
+
 Still open (Jeff, not yet decided):
 
-- Whether variants A, B and C are the right three, or C should be replaced.
 - Whether the card should have an active / pressed state.
 
 Agents add their own questions below this line.
 
 ## 12. Review log
 
-Filled in after Jeff reviews in Design Mode and on the Vercel preview.
+Compared on 2026-10-12 against the current `main`, in the browser pane at 320, 768 and 1280px, using local dev servers. Jeff's own Design Mode and Vercel preview review of the chosen variant is still pending. Nothing here was tested with a screen reader.
 
-| Variant | Preview URL | Axe violations | Computed link name | Manual a11y | Verdict | Notes |
-| :------ | :---------- | :------------- | :----------------- | :---------- | :------ | :---- |
-| A | | | | | | |
-| B | | | | | | |
-| C | | | | | | |
+| Variant | Preview URL | Axe violations | Link text length | Manual a11y | Verdict | Notes |
+| :------ | :---------- | :------------- | :--------------- | :---------- | :------ | :---- |
+| A grid | local only | 0 | 237–284 characters (whole card) | Keyboard: 3 tab stops, whole card is the link. | Not chosen | Heights match `main` at 768px and about match at 320px. At 320px the "Featured" badge wraps under the number and the text column is narrow. Largest diff (+39 / −12). Keeps the long link name. |
+| B flex | local only | 0 | 237–284 characters (whole card) | Keyboard: 3 tab stops, whole card is the link. | Not chosen | Smallest diff (+15 / −2). Arrow drops onto its own row at 768px and below (+56px per card). Keeps the long link name. |
+| C stretched link | [PR #4 preview](https://jeff-portfolio-git-jfvertido-work-ca-c0c8c2-jfvertidos-projects.vercel.app) | 0 | 24–40 characters (title only) | Keyboard: 3 tab stops, 3px focus ring around the whole card. Hit-test: every part and edge of the card resolves to the link. | **Chosen** | Same mobile layout as B (+56px per card at 768px and below). Text inside the card can't be selected with the mouse. Uses `pointer-events: none` on the arrow. |
 
-**Decision:** TBD
-**Follow-ups:** none yet
+**Common to all three:** 1280px layout identical to `main`. Live Project card unchanged at every width. axe (WCAG 2.1 A and AA) reports 0 violations on `main` and on all three, so axe did not separate them. The link text length is the characters inside the card's link, which approximates the accessible name.
+
+**Decision:** C, because it is the only variant that shortens the link name while keeping the whole card clickable. Chosen by Jeff on 2026-10-12.
+**Follow-ups:**
+- Review the PR #4 preview at phone width and with the keyboard before merging.
+- Active / pressed state is still undecided.
+- A screen reader pass on variant C.
+- Remove the Orca worktrees and branches for A and B once C is merged.
