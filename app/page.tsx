@@ -84,10 +84,12 @@ export default function Home() {
             <h2 className="t-label">Live Project</h2>
           </div>
 
-          <a href="https://design-token-visualizer.vercel.app" target="_blank" rel="noopener" className="work-card" style={{border: '1px solid var(--border)', borderRadius: 'var(--radius-lg)', display: 'grid', gridTemplateColumns: '1fr auto', padding: '2.5rem'}}>
+          <article className="work-card work-card--stretched" style={{border: '1px solid var(--border)', borderRadius: 'var(--radius-lg)', padding: '2.5rem'}}>
             <div className="work-card-meta">
               <span className="t-label">Personal Project · Next.js · Deployed on Vercel</span>
-              <h3 className="t-title" style={{fontSize: '1.25rem', fontWeight: 400}}>Design Token Visualizer</h3>
+              <h3 className="t-title" style={{fontSize: '1.25rem', fontWeight: 400}}>
+                <a href="https://design-token-visualizer.vercel.app" target="_blank" rel="noopener" className="work-card-link">Design Token Visualizer<span className="sr-only"> (opens in a new tab)</span></a>
+              </h3>
               <p className="t-body" style={{color: 'var(--text-secondary)', maxWidth: '540px', fontWeight: 300, marginTop: '0.5rem'}}>
                 A live, interactive tool for exploring and visualizing design token systems. Built in Next.js with React and Tailwind — demonstrating the relationship between tokens, components, and themes.
               </p>
@@ -96,8 +98,7 @@ export default function Home() {
               </div>
             </div>
             <div className="work-card-arrow" aria-hidden="true">↗</div>
-            <span className="sr-only">(opens in a new tab)</span>
-          </a>
+          </article>
         </div>
       </section>
 
